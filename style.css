@@ -21,7 +21,7 @@ body {
   height: 80px;
   width: 100%;
   position: sticky;
-
+  z-index: 10;
   top: 0;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
 }
@@ -91,6 +91,17 @@ input[type="checkbox"] {
   width: 100%;
   background-color: var(--primary);
   height: 75vh;
+  animation: home 0.6s linear;
+}
+@keyframes home {
+  from {
+   
+    transform: scale(0.2) translateY(333px) ;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .menu-btn {
   color: var(--secondry);
@@ -107,6 +118,7 @@ input[type="checkbox"] {
   width: 45%;
   height: 80vh;
   margin-top: 44px;
+  
 }
 .home-content h1 {
   font-size: 65px;
@@ -233,9 +245,47 @@ input[type="checkbox"] {
 .about-img {
   width: 30%;
   height: 77vh;
-
   background-color: var(--primary);
+  animation: leftscrol 2s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+  transition: all 3s linear;
 }
+
+
+@keyframes leftscrol{
+  0%{
+    opacity: 0;
+    transform:scale(0.5) translateX(-611px);
+  }
+  100%{
+    opacity: 1;
+    transform:scale(1) translateX(0);
+  }
+}
+@keyframes rightscrol{
+  0%{
+    opacity: 0;
+    transform:scale(0.4) translateX(711px);
+  }
+  100%{
+    opacity: 1;
+    transform:scale(1) translateX(0);
+  }
+}
+@keyframes bottomscrol{
+  0%{
+    opacity: 0.4;
+    transform:scale(0.4) translateY(711px);
+  }
+  100%{
+    opacity: 1;
+    transform:scale(1) translateY(0);
+  }
+}
+
+
+
 .about-img img {
   height: 70vh;
   margin-top: 31px;
@@ -250,6 +300,10 @@ input[type="checkbox"] {
   width: 69vw;
   padding: 53px;
   background-color: var(--primary);
+  animation: rightscrol 2s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+  transition: all 3s linear;
 }
 .about-heading {
   font-size: 50px;
@@ -283,6 +337,10 @@ input[type="checkbox"] {
   height: 70vh;
   padding: 62px;
   background-color: var(--primary);
+  animation: leftscrol 2s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+  transition: all 3s linear;
 }
 .skill-content p {
   font-size: 17px;
@@ -297,6 +355,10 @@ input[type="checkbox"] {
   height: 70vh;
   padding: 62px;
   background-color: var(--primary);
+  animation: rightscrol 2s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+  transition: all 3s linear;
 }
 
 .subject {
@@ -385,6 +447,24 @@ input[type="checkbox"] {
   transition: all 0.5s ease;
   box-shadow: 0px 0px 2px var(--secondry);
 }
+.certificate-box1{
+  animation: leftscrol 2s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+  transition: all 3s linear;
+}
+.certificate-box2{
+  animation: bottomscrol 2s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+  transition: all 3s linear;
+}
+.certificate-box3{
+  animation: rightscrol 2s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+  transition: all 3s linear;
+}
 .certificate-box:hover {
   box-shadow: 0px 3px 7px var(--secondry);
 }
@@ -435,8 +515,27 @@ input[type="checkbox"] {
   background-position: center;
   height: 70%;
 }
+.left{
+  animation: leftscrol 2s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+  transition: all 3s linear;
+}
+.right{
+  animation: rightscrol 2s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+  transition: all 3s linear;
+}
+.bottom{
+  animation: bottomscrol 2s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+  transition: all 3s linear;
+}
 .box-1 {
   background-image: url(image/netflix.png);
+  
 }
 .box-2 {
   background-image: url(image/todolist.png);
@@ -465,6 +564,10 @@ input[type="checkbox"] {
 }
 #contect {
   height: 100vh;
+  animation: bottomscrol 2s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+  transition: all 3s linear;
 }
 .contect {
   display: flex;
@@ -821,27 +924,27 @@ input[type="checkbox"] {
 
 @media (max-width: 490px) {
   .nav_logo {
-    font-size: 42px;
+    font-size: 38px;
   }
   #theme {
-    height: 35px;
-    margin-left: 8%;
-  }
+    height: 31px;
+    margin-left: 25%;
+}
   nav ul li a {
     font-size: 19px;
   }
   nav ul {
-    top: 80px;
+    top: 72px;
   }
   .header {
-    height: 81px;
+    height: 70px;
   }
   nav {
-    height: 81px;
+    height: 70px;
   }
   nav .menu-btn i {
-    font-size: 35px;
-  }
+    font-size: 30px;
+}
   .home-img img {
     height: 300px;
     margin-top: 2px;
@@ -933,6 +1036,7 @@ input[type="checkbox"] {
 
   #contect {
     height: 76vh;
+
   }
   .formgroup input {
     width: 100%;
