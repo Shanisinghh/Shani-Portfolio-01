@@ -994,14 +994,18 @@ input[type="checkbox"] {
     height: 45vh;
   }
   .skill-progress {
-    padding: 17px;
+    padding: 16px;
     height: 53vh;
   }
   .subject {
-    font-size: 20px;
+    font-size: 16px;
   }
   .progress-bar::after {
     font-size: 17px;
+  }
+  .progress-line {
+    height: 5px;
+    top: 0px;
   }
   .certificate-box h2 {
     font-size: 20px;
@@ -1053,7 +1057,8 @@ input[type="checkbox"] {
     font-size: 12px;
   }
   .footer-logo .fa-solid {
-    font-size: 13px;
+    font-size: 17px;
+    padding: 7px;
   }
   .contactform {
     width: 93%;
